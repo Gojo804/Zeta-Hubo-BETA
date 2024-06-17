@@ -630,4 +630,338 @@ local function RBKJDDZ_fake_script() -- tracers.LocalScript
 							else
 								Tracer.Visible = true
 							end
+						else
+							Tracer.Visible = false
+						end
+					else
+						Tracer.Visible = false
+					end
+				end)
+				table.insert(connections, connection)
+			end
+		end
+	
+		game.Players.PlayerAdded:Connect(function(v)
+			if v ~= lplr then
+				local Tracer = getTracer(v)
+				local connection = game:GetService("RunService").RenderStepped:Connect(function()
+					if aiming and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character:FindFirstChild("HumanoidRootPart") and v.Character.Humanoid.Health > 0 then
+						local Vector, OnScreen = camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
+						if OnScreen then
+							Tracer.From = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 1)
+							Tracer.To = Vector2.new(Vector.X, Vector.Y)
+							if _G.TeamCheck and v.TeamColor == lplr.TeamColor then
+								Tracer.Visible = false
+							else
+								Tracer.Visible = true
+							end
+						else
+							Tracer.Visible = false
+						end
+					else
+						Tracer.Visible = false
+					end
+				end)
+				table.insert(connections, connection)
+			end
+		end)
+	end
+	
+	local function stopAiming()
+		for _, connection in pairs(connections) do
+			connection:Disconnect()
+		end
+		connections = {}
+	end
+	
+	local function toggleAiming()
+		aiming = not aiming
+		if aiming then
+			tracers.Text = "Off"
+			startAiming()
+		else
+			tracers.Text = "On"
+			stopAiming()
+		end
+	end
+	
+	tracers.MouseButton1Click:Connect(toggleAiming)
+	tracers.Text = "Off" -- Initial button text
+	
+end
+coroutine.wrap(RBKJDDZ_fake_script)()
+local function DAGL_fake_script() -- espname.LocalScript 
+	local script = Instance.new('LocalScript', espname)
+
+	local espbox = script.Parent
+	
+	local function cambiarTexto()
+		if espbox.Text == "On" then
+			espbox.Text = "Off"
+		else
+			espbox.Text = "On"
+		end
+	end
+	
+	espbox.MouseButton1Click:Connect(cambiarTexto)
+	
+	
+	
+end
+coroutine.wrap(DAGL_fake_script)()
+local function OTGYA_fake_script() -- espname.LocalScript 
+	local script = Instance.new('LocalScript', espname)
+
+	local highlightButton = script.Parent
+	
+	local FillColor = Color3.fromRGB(255,0,0)
+	local DepthMode = "AlwaysOnTop"
+	local FillTransparency = 0.5
+	local OutlineColor = Color3.fromRGB(255,255,255)
+	local OutlineTransparency = 0
+	
+	local CoreGui = game:FindService("CoreGui")
+	local Players = game:FindService("Players")
+	local lp = Players.LocalPlayer
+	local connections = {}
+	
+	local Storage = Instance.new("Folder")
+	Storage.Parent = CoreGui
+	Storage.Name = "Highlight_Storage"
+	
+	local highlighting = false
+	
+	local function Highlight(plr)
+		local Highlight = Instance.new("Highlight")
+		Highlight.Name = plr.Name
+		Highlight.FillColor = FillColor
+		Highlight.DepthMode = DepthMode
+		Highlight.FillTransparency = FillTransparency
+		Highlight.OutlineColor = OutlineColor
+		Highlight.OutlineTransparency = 0
+		Highlight.Parent = Storage
+	
+		local plrchar = plr.Character
+		if plrchar then
+			Highlight.Adornee = plrchar
+		end
+	
+		connections[plr] = plr.CharacterAdded:Connect(function(char)
+			Highlight.Adornee = char
+		end)
+	end
+	
+	local function startHighlighting()
+		Players.PlayerAdded:Connect(Highlight)
+		for i,v in next, Players:GetPlayers() do
+			Highlight(v)
+		end
+	
+		Players.PlayerRemoving:Connect(function(plr)
+			local plrname = plr.Name
+			if Storage:FindFirstChild(plrname) then
+				Storage[plrname]:Destroy()
+			end
+			if connections[plr] then
+				connections[plr]:Disconnect()
+			end
+		end)
+	end
+	
+	local function stopHighlighting()
+		for _, connection in pairs(connections) do
+			connection:Disconnect()
+		end
+		connections = {}
+	
+		for _, highlight in pairs(Storage:GetChildren()) do
+			highlight:Destroy()
+		end
+	end
+	
+	local function toggleHighlighting()
+		highlighting = not highlighting
+		if highlighting then
+			highlightButton.Text = "Stop Highlighting"
+			startHighlighting()
+		else
+			highlightButton.Text = "Start Highlighting"
+			stopHighlighting()
+		end
+	end
+	
+	highlightButton.MouseButton1Click:Connect(toggleHighlighting)
+	highlightButton.Text = "Start Highlighting" -- Initial button text
+	
+end
+coroutine.wrap(OTGYA_fake_script)()
+local function EMXM_fake_script() -- aimbot.LocalScript 
+	local script = Instance.new('LocalScript', aimbot)
+
+	local espbox = script.Parent
+	
+	local function cambiarTexto()
+		if espbox.Text == "On" then
+			espbox.Text = "Off"
+		else
+			espbox.Text = "On"
+		end
+	end
+	
+	espbox.MouseButton1Click:Connect(cambiarTexto)
+	
+	
+	
+end
+coroutine.wrap(EMXM_fake_script)()
+local function CYLOFOY_fake_script() -- aimbot.LocalScript 
+	local script = Instance.new('LocalScript', aimbot)
+
+	local localPlayer = game:GetService("Players").LocalPlayer
+	
+	local function getClosestPlayer()
+		local target = nil
+		local dist = math.huge
+	
+		for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+			if v.Name ~= localPlayer.Name then
+				if v.Character and v.Character:FindFirstChild("Head") and v.Character.Humanoid.Health > 0 and v.TeamColor ~= localPlayer.TeamColor then
+					local magnitude = (v.Character.HumanoidRootPart.Position - localPlayer.Character.HumanoidRootPart.Position).magnitude
+	
+					if magnitude < dist then
+						target = v
+						dist = magnitude
+					end
+				end
+			end
+		end
+	
+		return target
+	end
+	
+	local camera = game.Workspace.CurrentCamera
+	local UIS = game:GetService("UserInputService")
+	local aim = false
+	
+	game:GetService("RunService").RenderStepped:Connect(function()
+		if aim then
+			local target = getClosestPlayer()
+			if target and target.Character and target.Character:FindFirstChild("Head") then
+				camera.CFrame = CFrame.new(camera.CFrame.Position, target.Character.Head.Position)
+			end
+		end
+	end)
+	
+	UIS.InputBegan:Connect(function(inp)
+		if inp.UserInputType == Enum.UserInputType.MouseButton2 then
+			aim = true
+		end
+	end)
+	
+	UIS.InputEnded:Connect(function(inp)
+		if inp.UserInputType == Enum.UserInputType.MouseButton2 then
+			aim = false
+		end
+	end)
+	
+end
+coroutine.wrap(CYLOFOY_fake_script)()
+local function ZCXUI_fake_script() -- aimbot.LocalScript 
+	local script = Instance.new('LocalScript', aimbot)
+
+	local localPlayer = game:GetService("Players").LocalPlayer
+	
+	local function getClosestPlayer()
+		local target = nil
+		local dist = math.huge
+	
+		for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+			if v.Name ~= localPlayer.Name then
+				if v.Character and v.Character:FindFirstChild("Head") and v.Character.Humanoid.Health > 0 and v.TeamColor ~= localPlayer.TeamColor then
+					local magnitude = (v.Character.HumanoidRootPart.Position - localPlayer.Character.HumanoidRootPart.Position).magnitude
+	
+					if magnitude < dist then
+						target = v
+						dist = magnitude
+					end
+				end
+			end
+		end
+	
+		return target
+	end
+	
+	local camera = game.Workspace.CurrentCamera
+	local UIS = game:GetService("UserInputService")
+	local aim = false
+	
+	game:GetService("RunService").RenderStepped:Connect(function()
+		if aim then
+			local target = getClosestPlayer()
+			if target and target.Character and target.Character:FindFirstChild("Head") then
+				camera.CFrame = CFrame.new(camera.CFrame.Position, target.Character.Head.Position)
+			end
+		end
+	end)
+	
+	UIS.InputBegan:Connect(function(inp)
+		if inp.UserInputType == Enum.UserInputType.MouseButton2 then
+			aim = true
+		end
+	end)
+	
+	UIS.InputEnded:Connect(function(inp)
+		if inp.UserInputType == Enum.UserInputType.MouseButton2 then
+			aim = false
+		end
+	end)
+	
+end
+coroutine.wrap(ZCXUI_fake_script)()
+local function VEAPPQ_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local frame = script.Parent:WaitForChild("Frame")
+	local TweenService = game:GetService("TweenService")
+	
+	-- Asegurarse de que el Frame sea visible
+	frame.Visible = true
+	
+	-- Configuración inicial del Frame (fuera de la pantalla)
+	frame.Position = UDim2.new(0.5, -frame.Size.X.Offset / 2, 1, 0)  -- Justo fuera de la pantalla inferior
+	
+	-- Configuración del objetivo de la animación (en pantalla)
+	local endPosition = UDim2.new(0.5, -frame.Size.X.Offset / 2, 0.5, -frame.Size.Y.Offset / 2) -- Centro de la pantalla
+	
+	-- Configuración de Tween (animación)
+	local tweenInfo = TweenInfo.new(
+		1, -- Tiempo de la animación en segundos
+		Enum.EasingStyle.Quad, -- Estilo de la animación
+		Enum.EasingDirection.Out, -- Dirección de la animación
+		0, -- Número de repeticiones
+		false, -- Reverso
+		0 -- Retardo
+	)
+	
+	local tween = TweenService:Create(frame, tweenInfo, {Position = endPosition})
+	
+	-- Esperar un corto período para asegurarse de que el juego ha cargado completamente
+	wait(1)
+	
+	-- Iniciar la animación
+	tween:Play()
+	
+end
+coroutine.wrap(VEAPPQ_fake_script)()
+				local connection = game:GetService("RunService").RenderStepped:Connect(function()
+					if aiming and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character:FindFirstChild("HumanoidRootPart") and v.Character.Humanoid.Health > 0 then
+						local Vector, OnScreen = camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
+						if OnScreen then
+							Tracer.From = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 1)
+							Tracer.To = Vector2.new(Vector.X, Vector.Y)
+							if _G.TeamCheck and v.TeamColor == lplr.TeamColor then
+								Tracer.Visible = false
+							else
+								Tracer.Visible = true
+							end
 	
