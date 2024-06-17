@@ -1,0 +1,633 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextButton = Instance.new("TextButton")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local barra = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local Frame1 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local espbox = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+local Frame2 = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
+local tracers = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
+local Frame3 = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local espname = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
+local TextLabel_4 = Instance.new("TextLabel")
+local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
+local Frame4 = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local aimbot = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
+local TextLabel_5 = Instance.new("TextLabel")
+local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextButton.Parent = ScreenGui
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.852459013, 0, 0.931122422, 0)
+TextButton.Size = UDim2.new(0.145578235, 0, 0.0629539937, 0)
+TextButton.Font = Enum.Font.Unknown
+TextButton.Text = "ZETA HUB"
+TextButton.TextColor3 = Color3.fromRGB(71, 0, 170)
+TextButton.TextScaled = true
+TextButton.TextSize = 29.000
+TextButton.TextWrapped = true
+
+UITextSizeConstraint.Parent = TextButton
+UITextSizeConstraint.MaxTextSize = 29
+
+Frame.Parent = ScreenGui
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Frame.BackgroundTransparency = 0.250
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.411799669, 0, 0.371997237, 0)
+Frame.Size = UDim2.new(0.175102934, 0, 0.255505174, 0)
+
+UICorner.Parent = Frame
+
+barra.Name = "barra"
+barra.Parent = Frame
+barra.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+barra.BorderColor3 = Color3.fromRGB(0, 0, 0)
+barra.BorderSizePixel = 0
+barra.Position = UDim2.new(0, 0, -6.03350969e-08, 0)
+barra.Size = UDim2.new(1.00000024, 0, 0.114548042, 0)
+
+TextLabel.Parent = barra
+TextLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.351812422, 0, 0, 0)
+TextLabel.Size = UDim2.new(0.293023288, 0, 1.00000036, 0)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "ZETA HUB"
+TextLabel.TextColor3 = Color3.fromRGB(128, 13, 222)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 17.000
+TextLabel.TextWrapped = true
+
+UITextSizeConstraint_2.Parent = TextLabel
+UITextSizeConstraint_2.MaxTextSize = 17
+
+Frame1.Name = "Frame1"
+Frame1.Parent = Frame
+Frame1.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frame1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame1.BorderSizePixel = 0
+Frame1.Position = UDim2.new(0.0232429262, 0, 0.147190243, 0)
+Frame1.Size = UDim2.new(0.958712459, 0, 0.0735294148, 0)
+
+UICorner_2.Parent = Frame1
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0232429933, 0, 0.158729747, 0)
+TextLabel_2.Size = UDim2.new(0.213835552, 0, 0.0588235334, 0)
+TextLabel_2.Font = Enum.Font.Unknown
+TextLabel_2.Text = "ESP BOX"
+TextLabel_2.TextColor3 = Color3.fromRGB(174, 255, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 17.000
+TextLabel_2.TextWrapped = true
+
+UITextSizeConstraint_3.Parent = TextLabel_2
+UITextSizeConstraint_3.MaxTextSize = 17
+
+espbox.Name = "espbox"
+espbox.Parent = Frame
+espbox.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+espbox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+espbox.BorderSizePixel = 0
+espbox.Position = UDim2.new(0.664509237, 0, 0.147190094, 0)
+espbox.Size = UDim2.new(0.316502243, 0, 0.0735294148, 0)
+espbox.Font = Enum.Font.Unknown
+espbox.Text = "Off"
+espbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+espbox.TextScaled = true
+espbox.TextSize = 18.000
+espbox.TextWrapped = true
+
+UICorner_3.Parent = espbox
+
+UITextSizeConstraint_4.Parent = espbox
+UITextSizeConstraint_4.MaxTextSize = 18
+
+Frame2.Name = "Frame2"
+Frame2.Parent = Frame
+Frame2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frame2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame2.BorderSizePixel = 0
+Frame2.Position = UDim2.new(0.0232224986, 0, 0.459565759, 0)
+Frame2.Size = UDim2.new(0.958733439, 0, 0.0735294148, 0)
+
+UICorner_4.Parent = Frame2
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.0207296517, 0, 0.471105278, 0)
+TextLabel_3.Size = UDim2.new(0.194572866, 0, 0.0588235334, 0)
+TextLabel_3.Font = Enum.Font.Unknown
+TextLabel_3.Text = "TRACERS"
+TextLabel_3.TextColor3 = Color3.fromRGB(174, 255, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 20.000
+TextLabel_3.TextWrapped = true
+
+UITextSizeConstraint_5.Parent = TextLabel_3
+UITextSizeConstraint_5.MaxTextSize = 17
+
+tracers.Name = "tracers"
+tracers.Parent = Frame
+tracers.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+tracers.BorderColor3 = Color3.fromRGB(0, 0, 0)
+tracers.BorderSizePixel = 0
+tracers.Position = UDim2.new(0.662971914, 0, 0.469758004, 0)
+tracers.Size = UDim2.new(0.318039119, 0, 0.0735294148, 0)
+tracers.Font = Enum.Font.Unknown
+tracers.Text = "Off"
+tracers.TextColor3 = Color3.fromRGB(255, 255, 255)
+tracers.TextScaled = true
+tracers.TextSize = 18.000
+tracers.TextWrapped = true
+
+UICorner_5.Parent = tracers
+
+UITextSizeConstraint_6.Parent = tracers
+UITextSizeConstraint_6.MaxTextSize = 18
+
+Frame3.Name = "Frame3"
+Frame3.Parent = Frame
+Frame3.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frame3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame3.BorderSizePixel = 0
+Frame3.Position = UDim2.new(0.0232429262, 0, 0.309873968, 0)
+Frame3.Size = UDim2.new(0.957768202, 0, 0.0735294148, 0)
+
+UICorner_6.Parent = Frame3
+
+espname.Name = "espname"
+espname.Parent = Frame3
+espname.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+espname.BorderColor3 = Color3.fromRGB(0, 0, 0)
+espname.BorderSizePixel = 0
+espname.Position = UDim2.new(0.667215705, 0, 0.069307141, 0)
+espname.Size = UDim2.new(0.324999988, 0, 0.967741966, 0)
+espname.Font = Enum.Font.Unknown
+espname.Text = "Off"
+espname.TextColor3 = Color3.fromRGB(255, 255, 255)
+espname.TextScaled = true
+espname.TextSize = 18.000
+espname.TextWrapped = true
+
+UICorner_7.Parent = espname
+
+UITextSizeConstraint_7.Parent = espname
+UITextSizeConstraint_7.MaxTextSize = 18
+
+TextLabel_4.Parent = Frame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.0232429188, 0, 0.317620754, 0)
+TextLabel_4.Size = UDim2.new(0.192059904, 0, 0.0588235334, 0)
+TextLabel_4.Font = Enum.Font.Unknown
+TextLabel_4.Text = "CHAMS"
+TextLabel_4.TextColor3 = Color3.fromRGB(174, 255, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 20.000
+TextLabel_4.TextWrapped = true
+
+UITextSizeConstraint_8.Parent = TextLabel_4
+UITextSizeConstraint_8.MaxTextSize = 17
+
+Frame4.Name = "Frame4"
+Frame4.Parent = Frame
+Frame4.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frame4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame4.BorderSizePixel = 0
+Frame4.Position = UDim2.new(0.0232429262, 0, 0.63641715, 0)
+Frame4.Size = UDim2.new(0.958712459, 0, 0.0735294148, 0)
+
+UICorner_8.Parent = Frame4
+
+aimbot.Name = "aimbot"
+aimbot.Parent = Frame4
+aimbot.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+aimbot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+aimbot.BorderSizePixel = 0
+aimbot.Position = UDim2.new(0.667215705, 0, 0.069307141, 0)
+aimbot.Size = UDim2.new(0.324999988, 0, 0.967741966, 0)
+aimbot.Font = Enum.Font.Unknown
+aimbot.Text = "On"
+aimbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+aimbot.TextScaled = true
+aimbot.TextSize = 18.000
+aimbot.TextWrapped = true
+
+UICorner_9.Parent = aimbot
+
+UITextSizeConstraint_9.Parent = aimbot
+UITextSizeConstraint_9.MaxTextSize = 18
+
+TextLabel_5.Parent = Frame
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.0232429262, 0, 0.642860532, 0)
+TextLabel_5.Size = UDim2.new(0.213835552, 0, 0.0588235334, 0)
+TextLabel_5.Font = Enum.Font.Unknown
+TextLabel_5.Text = "aimbot"
+TextLabel_5.TextColor3 = Color3.fromRGB(174, 255, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 20.000
+TextLabel_5.TextWrapped = true
+
+UITextSizeConstraint_10.Parent = TextLabel_5
+UITextSizeConstraint_10.MaxTextSize = 17
+
+-- Scripts:
+
+local function UKIK_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local SGui = script.Parent
+	local Frame = SGui:WaitForChild("Frame")
+	local TextButton = SGui:WaitForChild("TextButton")
+	local TweenService = game:GetService("TweenService")
+	
+	-- Configuración inicial del Frame (oculto fuera de la pantalla)
+	Frame.Position = UDim2.new(0.5, -Frame.Size.X.Offset / 2, 1, 0)
+	Frame.Visible = false
+	
+	-- Configuración de las animaciones de aparición y desaparición
+	local appearTweenInfo = TweenInfo.new(
+		1, -- Tiempo de la animación en segundos
+		Enum.EasingStyle.Quad, -- Estilo de la animación
+		Enum.EasingDirection.Out, -- Dirección de la animación
+		0, -- Número de repeticiones
+		false, -- Reverso
+		0 -- Retardo
+	)
+	
+	local disappearTweenInfo = TweenInfo.new(
+		1, -- Tiempo de la animación en segundos
+		Enum.EasingStyle.Quad, -- Estilo de la animación
+		Enum.EasingDirection.In, -- Dirección de la animación
+		0, -- Número de repeticiones
+		false, -- Reverso
+		0 -- Retardo
+	)
+	
+	-- Variable para almacenar la posición actual del Frame
+	local currentPos
+	
+	TextButton.MouseButton1Up:Connect(function()
+		if Frame.Visible then
+			-- Actualiza la posición de desaparición a la posición actual del Frame
+			currentPos = Frame.Position
+			local disappearTween = TweenService:Create(Frame, disappearTweenInfo, {Position = UDim2.new(0.5, -Frame.Size.X.Offset / 2, 1, 0)})
+	
+			disappearTween:Play()
+			disappearTween.Completed:Connect(function()
+				Frame.Visible = false
+			end)
+		else
+			-- Mueve el Frame al lugar guardado
+			Frame.Position = UDim2.new(0.5, -Frame.Size.X.Offset / 2, 1, 0)  -- Start offscreen again
+			Frame.Visible = true
+			local appearTween = TweenService:Create(Frame, appearTweenInfo, {Position = currentPos or UDim2.new(0.5, -Frame.Size.X.Offset / 2, 0.5, -Frame.Size.Y.Offset / 2)})
+	
+			appearTween:Play()
+		end
+	end)
+	
+end
+coroutine.wrap(UKIK_fake_script)()
+local function QHLJURF_fake_script() -- Frame.BlurController 
+	local script = Instance.new('LocalScript', Frame)
+
+	local Lighting          = game:GetService("Lighting")
+	local camera			= workspace.CurrentCamera
+	
+	local BLUR_SIZE         = Vector2.new(10, 10)
+	local PART_SIZE         = 0.01
+	local PART_TRANSPARENCY = 1 - 1e-7
+	local START_INTENSITY	= 0.30
+	
+	script.Parent:SetAttribute("BlurIntensity", START_INTENSITY)
+	
+	local BLUR_OBJ          = Instance.new("DepthOfFieldEffect")
+	BLUR_OBJ.FarIntensity   = 0
+	BLUR_OBJ.NearIntensity  = script.Parent:GetAttribute("BlurIntensity")
+	BLUR_OBJ.FocusDistance  = 0.25
+	BLUR_OBJ.InFocusRadius  = 0
+	BLUR_OBJ.Parent         = Lighting
+	
+	local PartsList         = {}
+	local BlursList         = {}
+	local BlurObjects       = {}
+	local BlurredGui        = {}
+	
+	BlurredGui.__index      = BlurredGui
+	
+	function rayPlaneIntersect(planePos, planeNormal, rayOrigin, rayDirection)
+		local n = planeNormal
+		local d = rayDirection
+		local v = rayOrigin - planePos
+	
+		local num = n.x*v.x + n.y*v.y + n.z*v.z
+		local den = n.x*d.x + n.y*d.y + n.z*d.z
+		local a = -num / den
+	
+		return rayOrigin + a * rayDirection, a
+	end
+	
+	function rebuildPartsList()
+		PartsList = {}
+		BlursList = {}
+		for blurObj, part in pairs(BlurObjects) do
+			table.insert(PartsList, part)
+			table.insert(BlursList, blurObj)
+		end
+	end
+	
+	function BlurredGui.new(frame, shape)
+		local blurPart        = Instance.new("Part")
+		blurPart.Size         = Vector3.new(1, 1, 1) * 0.01
+		blurPart.Anchored     = true
+		blurPart.CanCollide   = false
+		blurPart.CanTouch     = false
+		blurPart.Material     = Enum.Material.Glass
+		blurPart.Transparency = PART_TRANSPARENCY
+		blurPart.Parent       = workspace.CurrentCamera
+	
+		local mesh
+		if (shape == "Rectangle") then
+			mesh        = Instance.new("BlockMesh")
+			mesh.Parent = blurPart
+		elseif (shape == "Oval") then
+			mesh          = Instance.new("SpecialMesh")
+			mesh.MeshType = Enum.MeshType.Sphere
+			mesh.Parent   = blurPart
+		end
+		
+		local ignoreInset = false
+		local currentObj  = frame
+		
+		while true do
+			currentObj = currentObj.Parent
+	
+			if (currentObj and currentObj:IsA("ScreenGui")) then
+				ignoreInset = currentObj.IgnoreGuiInset
+				break
+			elseif (currentObj == nil) then
+				break
+			end
+		end
+	
+		local new = setmetatable({
+			Frame          = frame;
+			Part           = blurPart;
+			Mesh           = mesh;
+			IgnoreGuiInset = ignoreInset;
+		}, BlurredGui)
+	
+		BlurObjects[new] = blurPart
+		rebuildPartsList()
+	
+		game:GetService("RunService"):BindToRenderStep("...", Enum.RenderPriority.Camera.Value + 1, function()
+			blurPart.CFrame = camera.CFrame * CFrame.new(0,0,0)
+			BlurredGui.updateAll()
+		end)
+		return new
+	end
+	
+	function updateGui(blurObj)
+		if (not blurObj.Frame.Visible) then
+			blurObj.Part.Transparency = 1
+			return
+		end
+		
+		local camera = workspace.CurrentCamera
+		local frame  = blurObj.Frame
+		local part   = blurObj.Part
+		local mesh   = blurObj.Mesh
+		
+		part.Transparency = PART_TRANSPARENCY
+		
+		local corner0 = frame.AbsolutePosition + BLUR_SIZE
+		local corner1 = corner0 + frame.AbsoluteSize - BLUR_SIZE*2
+		local ray0, ray1
+	
+		if (blurObj.IgnoreGuiInset) then
+			ray0 = camera:ViewportPointToRay(corner0.X, corner0.Y, 1)
+			ray1 = camera:ViewportPointToRay(corner1.X, corner1.Y, 1)
+		else
+			ray0 = camera:ScreenPointToRay(corner0.X, corner0.Y, 1)
+			ray1 = camera:ScreenPointToRay(corner1.X, corner1.Y, 1)
+		end
+	
+		local planeOrigin = camera.CFrame.Position + camera.CFrame.LookVector * (0.05 - camera.NearPlaneZ)
+		local planeNormal = camera.CFrame.LookVector
+		local pos0 = rayPlaneIntersect(planeOrigin, planeNormal, ray0.Origin, ray0.Direction)
+		local pos1 = rayPlaneIntersect(planeOrigin, planeNormal, ray1.Origin, ray1.Direction)
+	
+		local pos0 = camera.CFrame:PointToObjectSpace(pos0)
+		local pos1 = camera.CFrame:PointToObjectSpace(pos1)
+	
+		local size   = pos1 - pos0
+		local center = (pos0 + pos1)/2
+	
+		mesh.Offset = center
+		mesh.Scale  = size / PART_SIZE
+	end
+	
+	function BlurredGui.updateAll()
+		BLUR_OBJ.NearIntensity = tonumber(script.Parent:GetAttribute("BlurIntensity"))
+		
+		for i = 1, #BlursList do
+			updateGui(BlursList[i])
+		end
+	
+		local cframes = table.create(#BlursList, workspace.CurrentCamera.CFrame)
+		workspace:BulkMoveTo(PartsList, cframes, Enum.BulkMoveMode.FireCFrameChanged)
+	
+		BLUR_OBJ.FocusDistance = 0.25 - camera.NearPlaneZ
+	end
+	
+	function BlurredGui:Destroy()
+		self.Part:Destroy()
+		BlurObjects[self] = nil
+		rebuildPartsList()
+	end
+	
+	BlurredGui.new(script.Parent, "Rectangle")
+	
+	BlurredGui.updateAll()
+	return BlurredGui
+end
+coroutine.wrap(QHLJURF_fake_script)()
+local function IYUJF_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local frame = script.Parent
+	local userInputService = game:GetService("UserInputService")
+	
+	local dragging = false
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		frame.Position = UDim2.new(
+			startPos.X.Scale,
+			startPos.X.Offset + delta.X,
+			startPos.Y.Scale,
+			startPos.Y.Offset + delta.Y
+		)
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	frame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	userInputService.InputChanged:Connect(function(input)
+		if dragging and input == dragInput then
+			updateInput(input)
+		end
+	end)
+	
+end
+coroutine.wrap(IYUJF_fake_script)()
+local function DEZMX_fake_script() -- espbox.LocalScript 
+	local script = Instance.new('LocalScript', espbox)
+
+	local espbox = script.Parent
+	
+	local function cambiarTexto()
+		if espbox.Text == "On" then
+			espbox.Text = "Off"
+		else
+			espbox.Text = "On"
+		end
+	end
+	
+	espbox.MouseButton1Click:Connect(cambiarTexto)
+	
+	
+	
+end
+coroutine.wrap(DEZMX_fake_script)()
+local function UVRYRME_fake_script() -- tracers.LocalScript 
+	local script = Instance.new('LocalScript', tracers)
+
+	local espbox = script.Parent
+	
+	local function cambiarTexto()
+		if espbox.Text == "On" then
+			espbox.Text = "Off"
+		else
+			espbox.Text = "On"
+		end
+	end
+	
+	espbox.MouseButton1Click:Connect(cambiarTexto)
+	
+	
+	
+end
+coroutine.wrap(UVRYRME_fake_script)()
+local function RBKJDDZ_fake_script() -- tracers.LocalScript 
+	local script = Instance.new('LocalScript', tracers)
+
+	local tracers = script.Parent
+	
+	local lplr = game.Players.LocalPlayer
+	local camera = game:GetService("Workspace").CurrentCamera
+	local CurrentCamera = workspace.CurrentCamera
+	local worldToViewportPoint = CurrentCamera.worldToViewportPoint
+	
+	_G.TeamCheck = false -- Use True or False to toggle TeamCheck
+	
+	local aiming = false
+	local connections = {}
+	
+	local function getTracer(v)
+		local Tracer = Drawing.new("Line")
+		Tracer.Visible = false
+		Tracer.Color = Color3.new(1, 1, 1)
+		Tracer.Thickness = 1
+		Tracer.Transparency = 1
+		Tracer.Name = v.Name .. "_Tracer" -- Identificación
+		return Tracer
+	end
+	
+	local function startAiming()
+		for _, v in pairs(game.Players:GetPlayers()) do
+			if v ~= lplr then
+				local Tracer = getTracer(v)
+				local connection = game:GetService("RunService").RenderStepped:Connect(function()
+					if aiming and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character:FindFirstChild("HumanoidRootPart") and v.Character.Humanoid.Health > 0 then
+						local Vector, OnScreen = camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
+						if OnScreen then
+							Tracer.From = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 1)
+							Tracer.To = Vector2.new(Vector.X, Vector.Y)
+							if _G.TeamCheck and v.TeamColor == lplr.TeamColor then
+								Tracer.Visible = false
+							else
+								Tracer.Visible = true
+							end
+	
