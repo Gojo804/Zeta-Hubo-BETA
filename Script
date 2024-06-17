@@ -953,15 +953,4 @@ local function VEAPPQ_fake_script() -- ScreenGui.LocalScript
 	
 end
 coroutine.wrap(VEAPPQ_fake_script)()
-				local connection = game:GetService("RunService").RenderStepped:Connect(function()
-					if aiming and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character:FindFirstChild("HumanoidRootPart") and v.Character.Humanoid.Health > 0 then
-						local Vector, OnScreen = camera:worldToViewportPoint(v.Character.HumanoidRootPart.Position)
-						if OnScreen then
-							Tracer.From = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 1)
-							Tracer.To = Vector2.new(Vector.X, Vector.Y)
-							if _G.TeamCheck and v.TeamColor == lplr.TeamColor then
-								Tracer.Visible = false
-							else
-								Tracer.Visible = true
-							end
-	
+				
