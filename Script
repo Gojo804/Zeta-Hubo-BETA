@@ -953,4 +953,3 @@ local function VEAPPQ_fake_script() -- ScreenGui.LocalScript
 	
 end
 coroutine.wrap(VEAPPQ_fake_script)()
-				
